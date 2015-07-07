@@ -7,6 +7,7 @@ define('DEBUG', false);
 
 require('Components/Core/Request.php');
 require('Components/Core/Router.php');
+require('Components/Core/Templater.php');
 require('Components/Core/BaseController.php');
 
 try

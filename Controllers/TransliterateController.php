@@ -7,9 +7,9 @@ class TransliterateController extends BaseController
     {
         if (!empty($_POST['text']))
         {
-            echo TranslitHelper::transliterate($_POST['text'], true, '-');
+            $this->templater->set('handledText', TranslitHelper::transliterate($_POST['text'], true, '-'));
         }
 
-        require('Views/Transliterate/index.html');
+        $this->templater->display('transliterate/index');
     }
 }
