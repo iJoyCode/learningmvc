@@ -1,10 +1,19 @@
 <?php
  
-class TestModel
+class TestModel extends BaseModel
 {
+    /**
+     * @return bool|string
+     */
     public function getTitle()
     {
-        // Работа с БД
-        return 'test';
+        $result = $this->db->query('SELECT first_name, last_name FROM re_account_user WHERE id = 16');
+
+        if ($result)
+        {
+            return $result['first_name'] . ' ' . $result['last_name'];
+        }
+
+        return false;
     }
 }

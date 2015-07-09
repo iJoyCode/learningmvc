@@ -9,9 +9,13 @@ require('Components/Core/Request.php');
 require('Components/Core/Router.php');
 require('Components/Core/Templater.php');
 require('Components/Core/BaseController.php');
+require('Components/Core/BaseModel.php');
+require('Components/Core/Application.php');
+require('Components/Database/Database.php');
 
 try
 {
+    new Application();
     Router::route(new Request());
 }
 catch (Exception $e)
