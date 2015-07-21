@@ -1,5 +1,7 @@
-<?php
-require('Models/TestModel.php');
+<?php namespace App\Controllers;
+
+use App\Components\Core\BaseController;
+use App\Models\TestModel;
 
 class TestController extends BaseController
 {

@@ -1,5 +1,7 @@
-<?php
-require('Components/Helper/TranslitHelper.php');
+<?php namespace App\Controllers;
+
+use App\Components\Core\BaseController;
+use Behat\Transliterator\Transliterator;
 
 class TransliterateController extends BaseController
 {
@@ -7,7 +9,7 @@ class TransliterateController extends BaseController
     {
         if (!empty($_POST['text']))
         {
-            $this->templater->set('handledText', TranslitHelper::transliterate($_POST['text'], true, '-'));
+            $this->templater->set('handledText', Transliterator::transliterate($_POST['text']));
         }
 
         $this->templater->display('transliterate/index');

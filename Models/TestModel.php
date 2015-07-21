@@ -1,5 +1,7 @@
-<?php
- 
+<?php namespace App\Models;
+
+use App\Components\Core\BaseModel;
+
 class TestModel extends BaseModel
 {
     /**
